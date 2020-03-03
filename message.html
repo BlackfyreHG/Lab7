@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <style>
+            .message
+            {
+                font-family: "Courier New", Courier, monospace
+            }
+            img
+            {
+                width:300px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to the secret message page</h1>
+        <p>Here is where you decode the message. To do this, you must use the Vignenere cipher. With the Vigenere cipher, you align the letters of the password and the secret message. For example, if your password was clue you would align it like this</p>
+        <p class="message">UPWVGE</p>
+        <p class="message">CLUECL</p>
+        <p>Note that the password is repeated if the message is longer. Next, for each pair of letters, look in the table pictured below. Find the row for the letter in the password and go across until you see the letter in the message. That column is the correct letter.</p>
+        <img src="pics/cipher.png" />
+        <p class="message">UPWVGE</p>
+        <p class="message">CLUECL</p>
+        <p class="message">SECRET</p>
+        <p>Now, here's the secret message. It's up to you to find the password!</p>
+        <p class="message">Upywo gji ogvt Gmpg mf llu binfij gj jbi skvkl tktdyg.</p>
+    </body>
+</html>

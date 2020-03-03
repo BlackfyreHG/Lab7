@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <style>
+            img
+            {
+                width:250px;
+                height:150px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>To recieve the next piece of the password, find the legendary bird that always rises from the ashes. If you've got the wrong beast, try spinning. Legendary creatures hate spinning. If you accidentally spin away all the legendary beasts, click Retry</p>
+        <a href="index.html">Home</a> <a href="puzzle3.html">Retry</a><br/>
+        <img src="pics/dragon.jpg" class="dragon" />
+        <p class="dragon">Kappa</p>
+    </body>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+        
+        
+        d3.selectAll(".dragon")
+        .on("wheel", function()
+        {
+            d3.select("img.dragon")
+            .attr("src", "pics/unicorn.png")
+            .attr("class", "unicorn");
+            
+            d3.select("p.dragon")
+            .attr("class", "unicorn")
+            .text("Basilisk");
+            
+            d3.selectAll(".unicorn")
+            .on("wheel", function()
+            {
+                d3.select("img.unicorn")
+                .attr("src", "pics/phoenix.png")
+                .attr("class", "phoenix");
+            
+                d3.select("p.unicorn")
+                .attr("class", "phoenix")
+                .text("Fairy");
+                
+                d3.selectAll(".phoenix")
+                .on("wheel", function()
+                {
+                    d3.select("img.phoenix")
+                    .attr("src", "pics/dog.jpg")
+                    .attr("class", "dog");
+            
+                    d3.select("p.phoenix")
+                    .attr("class", "gog")
+                    .text("Cat");
+                });
+            });
+        });
+        
+    </script>
+</html>

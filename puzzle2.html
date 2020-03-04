@@ -55,7 +55,7 @@
     <body>
         <h1>Puzzle 2</h1>
         <h2>Use the message to determine which color squares to select. If you manage it, you will be given the next part of the key!</h2>
-        
+        <a href="index.html">Home</a>
         <p>
             "The sun rose at dawn, and after this the day was clear. But then clouds rolled in with rain. At days end the sun set with the brilliance of florida fruits."
         </p>
@@ -84,13 +84,13 @@
     
     d3.selectAll("div").on("click",function()
     {
-    console.log(d3.select(this).attr("class"));
+    //console.log(d3.select(this).attr("class"));
     //answer.push(d3.select(this).attr("class"));
     answer = answer +d3.select(this).attr("class");
         counter = counter+1;
        //d3.selectAll("div").
-    console.log(counter);
-    console.log(answer);
+    //console.log(counter);
+    //console.log(answer);
     d3.select("p.a").text(answer);
     });
     
@@ -104,10 +104,7 @@
         .attr("class",'b')
         .attr("href", 'puzzle2.html');
     d3.select("a.b").text('Reload Page');
-    d3.select("body").append("a")
-        .attr("class",'h')
-        .attr("href", 'index.html');
-    d3.select("a.h").text('Home');
+    
     
     d3.select("body").append("h2").text("Secret Message"); 
     

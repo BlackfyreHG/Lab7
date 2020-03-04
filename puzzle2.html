@@ -12,7 +12,7 @@
                 
             }
 
-            .rose {
+            .g {
                 background-color:red;
                 
             }
@@ -25,7 +25,7 @@
                 background-color:yellow;
                 
             }
-            .b1 {
+            .o {
                 background-color:cornflowerblue;
                 
             }
@@ -33,7 +33,7 @@
                 background-color:navy;
                 
             }
-            .grey {
+            .l {
                 background-color:grey;
                 
             }
@@ -41,7 +41,7 @@
                 background-color:yellow;
                 
             }
-            .or {
+            .d {
                 background-color:orangered;
                 
             }
@@ -59,14 +59,15 @@
         <p>
             "The sun rose at dawn, and after this the day was clear. But then clouds rolled in with rain. At days end the sun set with the brilliance of florida fruits."
         </p>
-        <div class = "rose">"1"</div>
+        <p> Hint: The secret message is a four letter word, so if the word displayed gets bigger than that, refresh the page :)</p>
+        <div class = "g">"1"</div>
         <div class = "k">"2"</div>
         <div class = "y1">"3"</div>
-        <div class = "b1">"4"</div>
+        <div class = "o">"4"</div>
         <div class = "navy">"5"</div>
-        <div class = "grey">"6"</div>
+        <div class = "l">"6"</div>
         <div class = "y2">"7"</div>
-        <div class = "or">"8"</div>
+        <div class = "d">"8"</div>
         <div class = "gr">"9"</div>
        
         
@@ -90,19 +91,25 @@
        //d3.selectAll("div").
     console.log(counter);
     console.log(answer);
+    d3.select("p.a").text(answer);
     });
     
-    d3.select("body").append("h2").text("Secret Page link"); 
-    var p = d3.select("body").append("a").attr("class",'a');
-    console.log(p);
-    d3.select('a.a').attr("href", 'puzzle2.html');
-    d3.select('a.a').text(answer);
+    //var p = d3.select("body").append("a").attr("class",'a');
+    //console.log(p);
+    
+    
    
     d3.select("body").append("h2").text("To Try Again");
     d3.select("body").append("a")
         .attr("class",'b')
         .attr("href", 'puzzle2.html');
     d3.select("a.b").text('Reload Page');
+    
+    d3.select("body").append("h2").text("Secret Message"); 
+    
+    d3.select("body").append("p")
+        .attr("class","a")
+        .text(answer);
 
 
 </script>

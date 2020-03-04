@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <style>
+            body {
+                text-align:center; 
+            }
+            div {
+                float:left;
+                display:inline-block;
+                height:10%;
+                width:11%; 
+                
+            }
+
+            .rose {
+                background-color:red;
+                
+            }
+            
+            .k {
+                background-color:black;
+                
+            }
+            .y1 {
+                background-color:yellow;
+                
+            }
+            .b1 {
+                background-color:cornflowerblue;
+                
+            }
+            .navy {
+                background-color:navy;
+                
+            }
+            .grey {
+                background-color:grey;
+                
+            }
+            .y2 {
+                background-color:yellow;
+                
+            }
+            .or {
+                background-color:orangered;
+                
+            }
+            .gr {
+                background-color:green;
+                
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>Puzzle 2</h1>
+        <h2>Use the message to determine which color squares to select. If you manage it, you will be given the next part of the key!</h2>
+        
+        <p>
+            "The sun rose at dawn, and after this the day was clear. But then clouds rolled in with rain. At days end the sun set with the brilliance of florida fruits."
+        </p>
+        <div class = "rose">"1"</div>
+        <div class = "k">"2"</div>
+        <div class = "y1">"3"</div>
+        <div class = "b1">"4"</div>
+        <div class = "navy">"5"</div>
+        <div class = "grey">"6"</div>
+        <div class = "y2">"7"</div>
+        <div class = "or">"8"</div>
+        <div class = "gr">"9"</div>
+       
+        
+    </body>
+</html>
+
+<script src="https://d3js.org/d3.v5.min.js"> 
+</script>
+        
+<script>
+    var counter = 0; 
+    var answer ='';
+    var correct_colors = [1,4,6,8];
+    
+    d3.selectAll("div").on("click",function()
+    {
+    console.log(d3.select(this).attr("class"));
+    //answer.push(d3.select(this).attr("class"));
+    answer = answer +d3.select(this).attr("class");
+        counter = counter+1;
+       //d3.selectAll("div").
+    console.log(counter);
+    console.log(answer);
+    });
+    
+    d3.select("body").append("h2").text("Secret Page link"); 
+    var p = d3.select("body").append("a").attr("class",'a');
+    console.log(p);
+    d3.select('a.a').attr("href", 'puzzle2.html');
+    d3.select('a.a').text(answer);
+   
+    d3.select("body").append("h2").text("To Try Again");
+    d3.select("body").append("a")
+        .attr("class",'b')
+        .attr("href", 'puzzle2.html');
+    d3.select("a.b").text('Reload Page');
+
+
+</script>
